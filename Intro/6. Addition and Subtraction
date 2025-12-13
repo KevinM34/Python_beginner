@@ -1,0 +1,10 @@
+num1 = int(input("Enter a number: "))
+num2 = int(input("Enter another number: "))
+choice=str(input("Please enter your choice - addition or subtraction "))
+if choice == "addition":
+  ans=num1+num2
+  print("The answer is ", ans)
+elif choice == "subtraction":
+  ans=num1-num2
+  print("The answer is ", ans3)
+else :print("Please enter correct choice- addition or subtraction !")
