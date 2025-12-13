@@ -1,0 +1,16 @@
+import random
+number=random.randint(1, 10)
+found =  False
+while not found:  
+  guess=int(input("Please enter a number between 1 and 10: "))
+  if guess == number:
+    print("You got it corect!")
+    found= True
+  elif guess > number:
+    print("Your guess is too big!")
+  elif  guess < number:
+    print("Your guess is too small!")
+  else: 
+    print("your answer is incorrect!")
+    
+  
