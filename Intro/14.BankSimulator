@@ -1,0 +1,24 @@
+print("_______________BANK________________")
+balance = 1000
+while True:
+    print(
+        
+        "1. Check Balance  2. Deposit  3. Withdraw  4. Exit")
+    choice = int(input("Please choose an option: "))
+
+    if choice == 1:
+        print("Balance:", balance)
+    elif choice == 2:
+        balance = balance+float(input("Deposit amount: "))
+        print("The new balance is ", balance)
+    elif choice == 3:
+        amount = float(input("Withdraw amount: "))
+        print("The new balance is ", balance)
+        if amount <= balance:
+            balance =balance - amount
+        else:
+            print("Insufficient funds")
+    elif choice == 4 :
+        break
+    else:
+        print("Invalid choice")
