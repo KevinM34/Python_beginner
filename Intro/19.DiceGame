@@ -1,0 +1,37 @@
+import random
+user_score = 0
+computer_score = 0
+print("Welcome to the Dice Game!")
+print("Roll two dice each. Highest total wins!")
+while True:
+    player_choice = input("Type 'roll' to play or 'exit' to quit: ").lower()
+    if player_choice == "exit":
+        break
+    elif player_choice != "roll":
+        print("Invalid input! Try again.")
+        continue
+
+    user_die1 = random.randint(1, 6)
+    user_die2 = random.randint(1, 6)
+    computer_die1 = random.randint(1, 6)
+    computer_die2 = random.randint(1, 6)
+
+    user_total = user_die1 + user_die2
+    computer_total = computer_die1 + computer_die2
+
+    print("You rolled", user_die1, "and", user_die2, ". Your total is ", user_total)
+    print("Computer rolled", computer_die1, "and", computer_die2, ". Computer's total is ", computer_total)
+
+    if user_total > computer_total:
+        print("You win this round!")
+        user_score += 1
+    elif user_total < computer_total:
+        print("Computer wins this round!\n")
+        computer_score += 1
+    else:
+        print("It's a tie!")
+
+    print("Score → You: ", user_score, " | " , "Computer:",  computer_score)
+
+print("Thanks for playing!")
+print("Final Score → You: ", user_score, " | ", "Computer:",  computer_score)
