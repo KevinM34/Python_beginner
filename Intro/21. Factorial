@@ -1,0 +1,7 @@
+import math
+def factorial(n):
+    factor=math.factorial(n)
+    return factor
+n=int(input("Please enter number: "))
+x=factorial(n)
+print("The factorial of", n,"is", x)
