@@ -1,0 +1,7 @@
+n1=int(input("please enter number 1: "))
+n2=int(input("please enter number 2: "))
+try:
+    c=n1/n2
+    print(c)
+except(ZeroDivisionError, ValueError, ArithmeticError):
+    print("you cannot divide any number by zero. Please enter valid number.")
