@@ -1,0 +1,41 @@
+cousins = []
+
+# Enter cousin names
+for i in range(6):
+    cousin = input("Please enter your cousin's name: ")
+    print("Number of characters:", len(cousin))
+    cousins.append(cousin)
+    print(cousins)
+
+# Number check
+number = int(input("Please enter a number between 1 and 10: "))
+if number == 6:
+    cousins.clear()
+    print(cousins)
+    print("Please enter the names of your cousins again")
+
+# Menu
+print("Do you want to add, delete, or replace an element?")
+choice = input("What would you like to do? (add/delete/replace): ").lower()
+
+if choice == "add":
+    add = input("What do you want to add? ")
+    cousins.append(add)
+
+elif choice == "delete":
+    delete = input("What do you wish to delete? ")
+    if delete in cousins:
+        cousins.remove(delete)
+    else:
+        print(delete, "not found in list.")
+
+elif choice == "replace":
+    old = input("Which name do you want to replace? ")
+    if old in cousins:
+        new = input("What is the new name? ")
+        index = cousins.index(old)
+        cousins[index] = new
+    else:
+        print(old, "not found in list.")
+
+print("Final cousins list:", cousins)
