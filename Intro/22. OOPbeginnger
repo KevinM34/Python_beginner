@@ -1,0 +1,14 @@
+
+class Car:
+    def open_door(self):
+        print("door opened")
+        self.__engine()
+    def _accelerate(self):
+        print("Throttle increase")
+
+    def __engine(self):
+        print("Burst inside\ncar is moving")
+        self._accelerate()
+c=Car()
+c.open_door()
+c._accelerate()
