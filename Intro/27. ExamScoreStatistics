@@ -1,0 +1,33 @@
+
+num_students = int(input("Enter the number of students: "))
+scores = []
+for i in range(num_students):
+    score = int(input("Enter a score: "))
+    scores.append(score)
+
+total = 0
+passed = 0
+failed = 0
+highest = scores[0]
+lowest = scores[0]
+
+for score in scores:
+    total = total + score
+
+    if score >= 50:
+        passed = passed + 1
+    else:
+        failed = failed + 1
+
+    if score > highest:
+        highest = score
+
+    if score < lowest:
+        lowest = score
+
+average = total / len(scores)
+print("Average score:", average)
+print("Passed:", passed)
+print("Failed:", failed)
+print("Highest score:", highest)
+print("Lowest score:", lowest)
