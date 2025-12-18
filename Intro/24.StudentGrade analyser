@@ -1,0 +1,17 @@
+names = ["Ali", "Sara", "Jon", "Mei"]
+scores = [72, 88, 65, 88]
+total = 0
+for score in scores:
+    total += score
+average = total / len(scores)
+highest = max(scores)
+lowest = min(scores)
+
+print("Class average:", average)
+print("Highest score:", highest)
+print("Lowest score:", lowest)
+
+print("Students above average:")
+for i in range(len(scores)):
+    if scores[i] > average:
+        print(names[i])
