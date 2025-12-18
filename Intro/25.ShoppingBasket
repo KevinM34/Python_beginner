@@ -1,0 +1,21 @@
+basket = {
+    "Bread": 2.5,
+    "Milk": 1.8,
+    "Eggs": 3.2,
+    "Cheese": 4.5,
+    "Chicken": 38.0
+}
+
+total = 0
+
+for item in basket:
+    total = total + basket[item]
+
+print("Total before discount:", total)
+
+if total > 50:
+    discount = total * 0.10
+    total = total - discount
+    print("Discount applied:", discount)
+
+print("Final total:", total)
