@@ -1,0 +1,34 @@
+temperatures = [18, 21, 19, 24, 22, 20, 17]
+days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+
+
+total = 0
+for temp in temperatures:
+    total = total + temp
+average = total / len(temperatures)
+# Find hottest and coldest day
+highest_temp = temperatures[0]
+lowest_temp = temperatures[0]
+highest_day = days[0]
+lowest_day = days[0]
+
+for i in range(len(temperatures)):
+    if temperatures[i] > highest_temp:
+        highest_temp = temperatures[i]
+        highest_day = days[i]
+
+    if temperatures[i] < lowest_temp:
+        lowest_temp = temperatures[i]
+        lowest_day = days[i]
+
+print("Average temperature:", average)
+print("Hottest day:", highest_day, highest_temp)
+print("Coldest day:", lowest_day, lowest_temp)
+
+# Count days above average
+count = 0
+for temp in temperatures:
+    if temp > average:
+        count = count + 1
+
+print("Days above average:", count)
