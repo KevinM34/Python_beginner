@@ -1,0 +1,10 @@
+scores = [40, 80, 60]
+
+highest = max(scores)
+normalized = []
+
+for score in scores:
+    percentage = (score / highest) * 100
+    normalized.append(percentage)
+
+print("Normalized scores:", normalized)
