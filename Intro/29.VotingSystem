@@ -1,0 +1,16 @@
+votes = {}
+while True:
+    candidate = input("Vote for a candidate (or type 'stop' to finish): ")
+    
+
+    if candidate == "stop":
+        break
+
+    if candidate in votes:
+        votes[candidate] += 1
+    else:
+        votes[candidate] = 1
+
+print("Voting Results:")
+for candidate in votes:
+    print(candidate, ":", votes[candidate])
